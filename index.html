@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daan Coppe</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+  </head>
+
+  <body>
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a
+          class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+          href="javascript:void(0);"
+          onclick="toggleFunction()"
+          title="Toggle Navigation Menu"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="w3-bar-item w3-button">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-user"></i> ABOUT</a
+        >
+
+        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-envelope"></i> CONTACT</a
+        >
+      </div>
+
+      <div
+        id="navDemo"
+        class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium"
+      >
+        <a
+          href="#about"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >ABOUT</a
+        >
+
+        <a
+          href="#contact"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >CONTACT</a
+        >
+      </div>
+    </div>
+
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+      <div class="w3-display-middle" style="white-space: nowrap">
+        <span
+          class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"
+        >
+          <span class="w3">CPT-ACM</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="w3-content w3-container w3-padding-64" id="about">
+      <h3 class="w3-center">ABOUT ME</h3>
+      <p class="w3-center"><em>Life is full of endless possibilities</em></p>
+      <p>
+        Hier zie je mijn persoonlijke website waar ik mezelf beschikbaar maak
+        als web ontwikkelaar. Ik ben een persoon die open staat voor alle ideeën
+        en ik interesseer me in nieuwe dingen, dingen buiten mijn confort zone.
+      </p>
+      <p>
+        Het is enorm boeiend om een andere kijk op bepaalde zaken te krijgen en
+        in contact te komen met andere stijlen/gewoontes. Ik geef iedereen een
+        kansen luister naar de mening van anderen. Ik heb een nieuwsgierigheid
+        naar de mogelijke positieve afloop van gebeurtenissen in mijn dagelijks
+        leven. Daarom weet ik dat een goede omgeving en een positieve
+        ingesteldheid mij altijd zal inspireren tot de juiste daden.
+      </p>
+      <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-padding-large">
+          <p>
+            <b><i class="fa fa-user w3-margin-right"></i>Daan Coppe</b>
+          </p>
+          <br />
+          <img
+            src="./images/profilepic.png"
+            class="w3-round w3-image w3-opacity w3-hover-opacity-off"
+            alt="Photo of Me"
+            width="500"
+            height="333"
+          />
+        </div>
+
+        <div id="text" class="w3-col m6 w3-hide-small">
+          <p>
+            Welkom op CPT-ACM. Op deze naam ben ik gekomen nadat ik mezelf heb
+            voorgesteld als een merk en zo zal ik mij dus ook voorstellen. Ik
+            ben Daan, 24 jaar oud en koos deze naam omdat ik iemand ben die
+            mensen een verfrissende kijk wil geven op allerlij soorten zaken.
+            Als beginnende web ontwikkelaar is mijn doel op een creatieve manier
+            goed werk leveren. Eerlijkheid en veiligheid staan hoog op mijn
+            lijst. Door oplossingsgericht te werken wil ik een duidelijke
+            communicatie mogelijk maken.
+          </p>
+        </div>
+      </div>
+      <p class="w3-large w3-center w3-padding-16">Work:</p>
+      <p class="w3-wide"><i class="fa fa-code"></i>Web Development</p>
+      <div class="w3-light-grey">
+        <div
+          class="w3-container w3-padding-small w3-dark-grey w3-center"
+          style="width: 65%"
+        >
+          70%
+        </div>
+      </div>
+      <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+      <div class="w3-light-grey">
+        <div
+          class="w3-container w3-padding-small w3-dark-grey w3-center"
+          style="width: 50%"
+        >
+          50%
+        </div>
+        <p class="w3-wide"><i class="fas fa-palette"></i>Graphic Design</p>
+        <div class="w3-light-grey">
+          <div
+            class="w3-container w3-padding-small w3-dark-grey w3-center"
+            style="width: 40%"
+          >
+            30%
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">2+</span><br />
+        Partners
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">5</span><br />
+        Projects Done
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">5</span><br />
+        Happy Clients
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">20+</span><br />
+        Meetings
+      </div>
+    </div>
+
+    <div
+      id="modal01"
+      class="w3-modal w3-black"
+      onclick="this.style.display='none'"
+    >
+      <span
+        class="w3-button w3-large w3-black w3-display-topright"
+        title="Close Modal Image"
+        ><i class="fa fa-remove"></i
+      ></span>
+      <div
+        class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
+      >
+        <img id="img01" class="w3-image" />
+        <p id="caption" class="w3-opacity w3-large"></p>
+      </div>
+    </div>
+
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+      </div>
+    </div>
+
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+      <h3 class="w3-center">CONTACT</h3>
+
+      <div class="w3-row w3-padding-32 w3-section">
+        <div class="w3-col m4 w3-container">
+          <div
+            id="mapid"
+            class="w3-image w3-round"
+            style="width: 100%; height: 180px"
+          ></div>
+        </div>
+        <div class="w3-col m8 w3-panel">
+          <div class="w3-large w3-margin-bottom">
+            <i
+              class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
+            ></i>
+            Beringen, BE<br />
+            <i
+              class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
+            ></i>
+            Phone: +32 474 01 27 61<br />
+            <i
+              class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
+            ></i>
+            Email: cpt.acm@gmail.com<br />
+          </div>
+
+          <form action="/action_page.php" target="_blank">
+            <div class="w3-row-padding" style="margin: 0 -16px 8px -16px">
+              <div class="w3-half">
+                <input
+                  class="w3-input w3-border"
+                  type="text"
+                  placeholder="Name"
+                  required
+                  name="Name"
+                />
+              </div>
+              <div class="w3-half">
+                <input
+                  class="w3-input w3-border"
+                  type="text"
+                  placeholder="Email"
+                  required
+                  name="Email"
+                />
+              </div>
+            </div>
+            <input
+              class="w3-input w3-border"
+              type="text"
+              placeholder="Message"
+              required
+              name="Message"
+            />
+            <button
+              class="w3-button w3-black w3-right w3-section"
+              type="submit"
+            >
+              <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer
+      class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off"
+    >
+      <a href="#home" class="w3-button w3-light-grey"
+        ><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a
+      >
+      <div class="w3-xlarge w3-section">
+        <a href="https://www.facebook.com/daan.coppe">
+          <i class="fab fa-facebook-f w3-hover-opacity"></i
+        ></a>
+        <a href="https://www.instagram.com/daan_coppe/">
+          <i class="fab fa-instagram w3-hover-opacity"></i>
+        </a>
+
+        <a href="https://github.com/CPTACM">
+          <i class="fab fa-github w3-hover-opacity"></i
+        ></a>
+        <a href="https://be.linkedin.com/in/daan-coppe-a7735b187"
+          ><i class="fab fa-linkedin w3-hover-opacity"></i
+        ></a>
+      </div>
+      <p>&copy; Copyright: 2016-2020 <b>Daan Coppe </b></p>
+    </footer>
+
+    <script src="main.js"></script>
+
+  </body>
+</html>
